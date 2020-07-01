@@ -1,0 +1,247 @@
+﻿// Statistics.scss
+@import '_globalVars.scss';
+@import '_Mixins.scss';
+@import 'hamburger/Hamburger.scss';
+
+@media (min-width: 1281px)
+{
+  html {
+    font-size: 1em;
+  }
+}
+html
+{
+  scroll-behavior: smooth;
+  font-family: $font-primary;
+}
+@media (min-width: 1025px) and (max-width: 1280px)
+{
+}
+
+//Shared CSS for all pages
+li {
+  @include non-selectable;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+label {
+  color: #bdbdbd;
+}
+
+.highlight {
+  color: #54DEB7 !important;
+}
+
+.background-highlight {
+  background-color: #22222a;
+}
+
+li a:hover {
+  color: white;
+}
+
+li a {
+  color: #D6FFFF;
+}
+.nuxt-link-exact-active * {
+
+  color:#6af4f5 !important;
+}
+a:hover {
+  text-decoration: none;
+  color: #2BD9D7 !important;
+}
+
+
+.hide {
+  display: none;
+}
+
+
+li > a:hover {
+  color: #54DEB7 !important;
+}
+
+body {
+  background-color: black;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+button > * {
+  pointer-events: none;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+  text-align: center;
+  @include non-selectable;
+}
+
+.grid-container {
+  display: grid;
+}
+
+h2 {
+  font-size: 3.375em;
+  font-family: $font-primary;
+}
+
+@media (max-width: 999px) {
+  h2 {
+    font-size: 2.25em;
+  }
+}
+
+h3 {
+  font-family: $font-primary;
+  font-size: 2.25em;
+}
+
+@media (max-width: 999px) {
+  h3 {
+    font-size: 1.5em;
+  }
+}
+
+h4 {
+  font-size: 1.618em;
+}
+@media (max-width: 999px) {
+  h4 {
+    font-size: 1em;
+  }
+}
+
+small, .font_small {
+  font-size: 0.618em;
+}
+
+.big {
+  font-size: 1.25em;
+}
+
+p {
+  font-size: 1em;
+  margin-bottom: 1.3em;
+}
+
+span {
+  @include non-selectable;
+}
+
+button {
+  white-space: nowrap;
+}
+
+.box {
+  width: 100%;
+  float: left;
+  border: 1px solid #b3d5d6;
+  margin-bottom: 15px;
+}
+
+.head {
+  background-color: #222431;
+  border-bottom: 1px solid #10494e;
+  width: 100%;
+}
+
+button:focus {
+  outline: none;
+}
+.Progress {
+  width: 100%;
+  height: 80%;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 2;
+  margin: 5%;
+}
+
+.center {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+tbody {
+  width: 100%;
+}
+
+tr.selected th {
+  background-color: #0a6970;
+  color: #fff;
+}
+
+tr.selected td {
+  background-color: #0a6970;
+  color: #fff;
+}
+
+.left {
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+.right {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+}
+
+.fa-ul li {
+  margin-bottom: 10px;
+  display: inline-block;
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 6px;
+  width: 70%;
+  position: relative;
+}
+
+.fa-ul li span {
+  color: #222431;
+  text-align: left;
+  width: 70%;
+  vertical-align: middle;
+}
+
+/*//COLORS*/
+.white {
+  color: #fff !important;
+}
+
+.green {
+  color: #54DEB7 !important
+}
+
+.blue {
+  color: #66fcef;
+}
+
+.purple {
+  color: #6672fc;
+}
+
+.orange-strong {
+  color: #fc8966
+}

@@ -1,0 +1,67 @@
+@import '../../Mixins';
+.content-features
+{
+  padding: 1em;
+}
+.features-box
+{
+  flex-basis: 30%;
+  -ms-flex: auto;
+  width: 259px;
+  position: relative;
+  margin: 10px;
+  box-sizing: border-box;
+  background: #22222a;
+  border-radius: 10px;
+  text-align: center;
+@include small-shadow;
+}
+@media(max-width: 1333px) {
+  .features-box {
+    flex-basis: 33.33%;
+  }
+}
+@media(max-width: 1073px) {
+  .features-box {
+    flex-basis: 33.33%;
+  }
+}@media(max-width: 815px) {
+  .features-box {
+    flex-basis: 45%;
+  }
+}@media(max-width: 555px) {
+  .features-box {
+    flex-basis: 100%;
+  }
+}
+
+.features-box div
+{
+
+  vertical-align: middle;
+  display: inline-block;
+  /*border-radius: 20px;*/
+  margin: auto;
+  margin-top:5%;
+}
+.features-box h4
+{
+  color: #D6FFFF;
+}
+.features-box h3 {
+  margin: 0.5em;
+}
+
+.feature-icon svg {
+  font-size: 5em;
+  /*height: 58px;*/
+  padding: 0.1em;
+  vertical-align: middle;
+  color: #f58d6a;
+}
+.features-box p {
+  color: #424242;
+  font-family: $font-sentence;
+  margin-right:1em;
+  margin-left:1em;
+}

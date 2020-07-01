@@ -1,0 +1,50 @@
+﻿// Statistics.scss
+
+@import 'Statistics';
+@import '../_globalVars';
+@import '../_Footer';
+@import '_index-nav';
+
+@import "_index-content.scss";
+
+h4 {
+    color: #D6FFFF;
+}
+
+button span 
+{
+    color: white;
+}
+
+/*New stuff*/
+.white-container{
+  background-color: white;
+  padding: 5em;
+}
+
+.content-button {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.25em;
+    padding: 4% 1%;
+    background-color: transparent;
+    border: 1px solid #296954;
+}
+
+.content-button:hover {
+    background-color: #005a9c;
+    color: white;
+}
+
+
+.display {
+    display: grid;
+}
+
+
+/*pricing section*/
+.pricing {
+    background-color: #fff;
+    height: 20vh;
+    width: 100%;
+}

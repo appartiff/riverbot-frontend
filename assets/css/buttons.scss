@@ -1,0 +1,87 @@
+﻿
+@import '_Mixins.scss';
+.apex-button {
+    position: relative;
+    @include shadow;
+}
+.button-blue .icon-container {
+    background-color: #52cac2 !important;
+}
+.button-green .icon-container {
+    background-color: #8ce389 !important;
+}
+.button-purple .icon-container {
+    background-color: #898fe3 !important;
+}
+.button-red .icon-container {
+    background-color: #e3898c !important;
+}
+
+.apex-button .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222431;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 100%;
+}
+
+.apex-button .dropdown-content a {
+    color: white;
+    padding: 0.3em 1em;
+
+    text-decoration: none;
+    display: block;
+}
+.apex-button .dropbtn {
+    background-color: #22222a;
+    display: inline-block;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.apex-button .dropbtn > div
+{
+    display: inline-block;
+    padding: 0 0.75em;
+}
+.apex-button .dropbtn .input
+{
+    min-width:200px;
+}
+.apex-button .dropbtn .icon-container {
+    padding: 0.5em 0.75em;
+    border-radius: 0 5px 5px 0;
+    background-color: white;
+    height: 100%;
+}
+.apex-button span
+{
+
+    font-size:1.25em;
+}
+/*.apex-button .dropbtn:hover, .dropbtn:focus
+{
+    background-color: #2980B9;
+}*/
+.apex-button.button-green .dropbtn:hover, .apex-button.button-green .dropbtn:focus {
+    background-color: #8ce389 !important;
+}
+.apex-button.button-blue .dropbtn:hover, .apex-button.button-blue .dropbtn:focus {
+    background-color: #52cac2 !important;
+}
+.apex-button.button-purple .dropbtn:hover, .apex-button.button-purple .dropbtn:focus {
+    background-color: #898fe3 !important;
+}
+.apex-button.button-red .dropbtn:hover, .apex-button.button-red .dropbtn:focus {
+    background-color: #e3898c !important;
+}
+
+
+.show {
+    display: block;
+}

@@ -1,0 +1,51 @@
+﻿@import '_globalVars.scss';
+
+@mixin grids {
+    display: grid;
+    grid-gap: 10px;
+}
+
+@mixin non-selectable {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+@mixin shadow($color: rgba(0,0,0,0.75))
+{
+    -webkit-box-shadow: -11px 13px 17px 0px $color;
+    -moz-box-shadow: -11px 13px 17px 0px $color;
+    box-shadow: -11px 13px 17px 0px $color;
+}
+
+@mixin small-shadow {
+    -webkit-box-shadow: -9px 13px 25px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: -9px 13px 25px 0px rgba(0,0,0,0.41);
+    box-shadow: -9px 13px 25px 0px rgba(0,0,0,0.41);
+}
+
+@mixin border-inside
+{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+@mixin display-flex
+{
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+@mixin flex($number)
+{
+  -webkit-box-flex: $number;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: $number;         /* OLD - Firefox 19- */
+  -webkit-flex: $number;          /* Chrome */
+  -ms-flex: $number;              /* IE 10 */
+  flex: $number;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}

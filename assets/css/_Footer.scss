@@ -1,0 +1,133 @@
+﻿/*--------------------------------
+FOOTER
+--------------------------------*/
+@import "Mixins";
+.footer {
+    width: 100%;
+    background-color:#17171d;
+    margin: auto;
+}
+
+.footer-container {
+    padding-left: 20%;
+    padding-right: 20%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.footer-container ul {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.footer-container .button-up {
+    margin-bottom: 3em;
+    margin-top: 3em;
+    text-align: center;
+}
+
+.row-2-up {
+    margin: auto;
+}
+
+.button-up button {
+    border: 0;
+    background: transparent;
+    color: #fff;
+}
+
+.button-up button:hover {
+    color: #fc8966;
+}
+
+.button-up i {
+    font-size: 2.441em;
+    text-align: center;
+}
+
+.footer-container li {
+    list-style: none;
+    margin-top: 0.262em;
+    font-size: 1em;
+    color: #95b8fd;
+}
+
+.row-2 {
+    grid-row: 1;
+    grid-column: 1/4;
+}
+
+.row-2 .link-section {
+    display: block;
+    color: #495057;
+    align-items: center;
+}
+
+.link-section > div {
+    display: inline-block;
+    margin-left: 1.85em;
+    margin-bottom: 1.85em;
+}
+
+.underline {
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin-bottom: 1.85em;
+}
+
+.social-media {
+    display: block;
+    margin: auto;
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+.social-media .circle {
+    display: inline-block;
+    border: 2px solid #66fcf1;
+    border-radius: 50%;
+    text-align: center;
+    background: transparent;
+    color: #66fcf1;
+    width: 5em;
+    height: 5em;
+}
+
+.social-media a {
+    margin: 0 0.328em;
+}
+
+.social-media i {
+    font-size: 2.441em;
+    vertical-align: middle;
+    color: #66fcf1;
+}
+
+.social-media i:hover {
+    color: #fff;
+}
+
+.trademark {
+    font-size: 0.8em;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 3em;
+  @include non-selectable
+}
+.footer svg {
+  font-size: 2em;
+  color: white;
+}
+@media(max-width: 1073px)
+{
+  .footer svg {
+    font-size: 3em;
+    color: white;
+  }
+}
+.footer svg:hover
+{
+  color:#6af4f5;
+}
