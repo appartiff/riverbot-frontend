@@ -16,13 +16,13 @@
 
     export default {
         computed: {
-            ...mapState('chart/ui', ['showSidebar']),
+            ...mapState('dashboard/sidebar', ['showSidebar']),
+
         },
         methods:
             {
-              ...mapMutations('chart/ui', ['toggleShowSidebar']),
-                toggleShow:function()
-                {
+              ...mapMutations('dashboard/sidebar', ['setSidebar','toggleShowSidebar']),
+                toggleShow() {
                     this.toggleShowSidebar();
                 },
             }

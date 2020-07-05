@@ -31,12 +31,21 @@ export default {
   */
   plugins: [
     {src:"@/plugins/plugins.js", ssr: false},
+    '~/plugins/repositories.js'
   ],
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '@nuxtjs/style-resources',
   ],
+  styleResources: {
+    // your settings here
+    sass: [],
+    scss: ['./assets/css/_Mixins.scss'],
+    less: [],
+    stylus: []
+  },
   /*
   ** Nuxt.js modules
   */
@@ -61,6 +70,11 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    baseURL:"https://riverbot.xyz",
+    proxy:true,
+  },
+  proxy: {
+    '/api/': { target: 'http://localhost:8080/', pathRewrite: {'^/api/': ''}, changeOrigin: true }
   },
   /*
   ** Build configuration

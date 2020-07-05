@@ -34,13 +34,13 @@
             {},
         computed:
             {
-              ...mapState('chart/ui', [
+              ...mapState('dashboard/sidebar', [
                 'showSidebar','selectedSidebar'
               ]),
             },
       methods:
             {
-              ...mapMutations('chart/ui', ['setSidebar','toggleShowSidebar']),
+              ...mapMutations('dashboard/sidebar', ['setSidebar','toggleShowSidebar']),
             }
     }
 </script>

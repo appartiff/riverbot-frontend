@@ -992,6 +992,14 @@
   transform: rotate(-90deg);
 }
 
+.field:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+.content {
+  margin-bottom: 1.5rem;
+}
+
 @media (min-width: 1281px) {
   html {
     font-size: 1em;
@@ -1029,8 +1037,25 @@ label {
   background-color: #22222a;
 }
 
-.active > a {
-  color: #54DEB7 !important;
+li a:hover {
+  color: white;
+}
+
+li a {
+  color: #D6FFFF;
+}
+
+.nuxt-link-exact-active * {
+  color: #6af4f5 !important;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #2BD9D7 !important;
+}
+
+.hide {
+  display: none;
 }
 
 li > a:hover {

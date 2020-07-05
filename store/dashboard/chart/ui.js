@@ -11,9 +11,3 @@ export const mutations = {
     state.showSidebar = !state.showSidebar;
   }
 }
-export const actions = {
-  changeMobile({commit}, payload) {
-    commit('changeMobile', payload);
-  }
-};
-

@@ -3,7 +3,7 @@
     <div class="nav-list">
       <apex-logo></apex-logo>
       <transition name="fade">
-      <apexChartNav v-if="selectedSidebar ===0"></apexChartNav>
+        <ChartMenu v-if="selectedSidebar ==='chart'"></ChartMenu>
       </transition>
     </div>
     <div>
@@ -16,16 +16,17 @@
 <script>
   import Logo  from'./NavBar/Logo'
  // import ChartNav from './navigation/chart/NavigationMenu'
+  import ChartMenu from './NavBar/ChartMenu';
   import {mapState} from "vuex";
     export default {
         components:
           {
-           // 'apexChartNav':ChartNav,
+           ChartMenu,
             'apex-logo': Logo,
           },
       computed:
         {
-          ...mapState('chart/ui', [
+          ...mapState('dashboard/sidebar', [
             'showSidebar','selectedSidebar'
           ]),
         },
@@ -36,38 +37,6 @@
   body {
     margin: 0;
   }
-
-
-  .navigation-dropdown-list {
-    padding: 0;
-    text-align: left;
-    margin: 0;
-    overflow-x: hidden;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .navigation-dropdown-list li
-  {
-    width: 100%;
-    padding: 0.4em 2em;
-    background-color: #22222a;
-    flex-grow: 0;
-    color: white;
-    white-space: nowrap;
-    text-align: center;
-  }
-
-  .navigation-dropdown-list li:not(.selected):hover
-  {
-    color: #80FFD0!important;
-
-  }
-
-  .navigation-dropdown-list .selected {
-    color: #fc8966;
-    border-left: 2px solid #66fcf1;
-  }
   #nav {
     background-color: #17171d;
     position: relative;
@@ -77,24 +46,9 @@
 
   .nav-list {
     margin: 0;
+    display:flex;
+    flex-direction:row;
   }
-
-  .nav-list li {
-    display: inline-block;
-    height: 100%;
-    width:100%;
-  }
-
-  .nav-list > .nav-list-item {
-    float: left;
-  }
-
-  .nav-list > div {
-    display: inline-block;
-    height: 100%;
-  }
-
-
   .login {
     grid-column: 3;
   }
@@ -122,31 +76,5 @@
 
   .progress-button-nav button:hover > span {
     color: black;
-  }
-
-  button span
-  {
-    display: inline-block;
-  }
-
-
-  .dropdown-content
-  {
-    position: absolute;
-    background-color: #22222a;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .dropdown a:hover {
-    background-color: #ddd;
   }
 </style>

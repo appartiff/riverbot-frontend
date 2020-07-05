@@ -1,0 +1,10 @@
+@import '_globalVars.scss';
+@import '_Mixins.scss';
+
+
+.field:not(:last-child){
+  margin-bottom:0.75rem;
+}
+.content{
+  margin-bottom:1.5rem;
+}

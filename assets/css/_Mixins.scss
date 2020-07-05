@@ -49,3 +49,13 @@
   -ms-flex: $number;              /* IE 10 */
   flex: $number;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
+
+
+@mixin font-description {
+  font-size:0.8rem;
+  color: rgba(255, 255, 255, 0.66);
+}
+@mixin font-primary {
+  font-size:0.8rem;
+  color:white;
+}
