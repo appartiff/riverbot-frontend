@@ -13,6 +13,7 @@
 <script>
   import Sidebar from './ChartPage/ui/Sidebar';
   import NavBar from './ChartPage/ui/NavBar';
+  import {mapActions, mapMutations, mapState} from "vuex";
     export default {
         name: "ChartPage",
       data() {
@@ -21,13 +22,18 @@
         }
       },
       methods:{
+        ...mapActions('assets', ['getAssets']),
           onSidebarChanged(i){
             this.selectedSidebar = i;
-          }
+          },
+
       },
       components:{
           Sidebar,
         NavBar
+      },
+      created() {
+        this.$store.dispatch('assets/getAssets');
       }
     }
 </script>

@@ -70,8 +70,8 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL:"https://riverbot.xyz",
-    proxy:true,
+    baseURL:"http://localhost:4000",
+    proxy:false,
   },
   proxy: {
     '/api/': { target: 'http://localhost:8080/', pathRewrite: {'^/api/': ''}, changeOrigin: true }

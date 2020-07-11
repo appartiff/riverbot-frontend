@@ -16,9 +16,9 @@
                 <th>Asset</th>
                 <th>Exchange</th>
               </tr>
-              <tr>
-                <td>January</td>
-                <td>$100</td>
+              <tr v-for="(asset,index) in filteredData" :key="asset.id">
+                <td>{{asset.asset}}</td>
+                <td>{{asset.exchange}}</td>
               </tr>
             </table>
           </div>
@@ -33,7 +33,7 @@
   import DarkBox from '../../../../../components/ui/box/DarkBox';
   import DropdownContainer from '../../../../../components/ui/Container/DropdownContainer';
   import Form from '../../../../../components/ui/form/Form';
-
+  import {mapActions, mapMutations, mapState,mapGetters} from "vuex";
   export default {
     name: "Assets",
     components: {
@@ -47,6 +47,14 @@
         input: ''
       }
     },
+    computed:{
+      ...mapState('assets', ['assets']),
+      ...mapGetters('assets',['searchAssets']),
+      filteredData() {
+        return this.searchAssets(this.input);
+      }
+    },
+
     props: {
       selectedDropdown: {
         required: true,
@@ -60,7 +68,9 @@
   table {
     table-layout: auto;
     border-collapse: collapse;
-
+    display: block;
+    max-height: 400px;
+    overflow-y: scroll;
     td:first-child,th:first-child{
       border-right: 1px solid $line--color-dark-light;
     }

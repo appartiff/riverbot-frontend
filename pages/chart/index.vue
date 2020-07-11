@@ -8,7 +8,8 @@
         name: "index",
       components:{
           ChartPage
-      }
+      },
+
     }
 </script>
 
