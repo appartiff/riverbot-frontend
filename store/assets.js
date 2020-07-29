@@ -18,7 +18,6 @@ export const actions = {
    const { status, data } = res
    if (status === 200)
    {
-     console.log(status)
      commit('setAssets', data);
    } else {
 
