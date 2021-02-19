@@ -1,6 +1,7 @@
 
 export default {
   mode: 'spa',
+  target: 'static',
   /*
   ** Headers of the page
   */
@@ -13,6 +14,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { hid: 'canvasjs', src: 'https://canvasjs.com/assets/script/canvasjs.stock.min.js', defer: true }
     ]
   },
   /*

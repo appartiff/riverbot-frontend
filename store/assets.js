@@ -1,24 +1,19 @@
-
-import AssetsRepository from "../repositories/AssetsRepository";
-
-
+import { set } from "vuex-intern";
 export const state = () => ({
   assets: [],
+  timeframes:["5min","15min","30min","1hour","2hour","4hour","Daily"]
 })
 
 export const mutations = {
-  setAssets(state,payload)
-  {
-    state.assets = payload;
-  },
+  SET_ASSETS: set("assets"),
 }
 export const actions = {
  async getAssets({commit}) {
-    let res = await this.$repositories.assets.getAll();
+   let res = await this.$repositories.assets.getAssets(true);
    const { status, data } = res
    if (status === 200)
    {
-     commit('setAssets', data);
+     commit('SET_ASSETS', data);
    } else {
 
    }
@@ -26,7 +21,9 @@ export const actions = {
   }
 };
 export const getters = {
-    searchAssets: (state) => (asset) => {
+    getFormattedAssets: (state) => {
+
+
       return state.assets.filter(thing => thing.asset.toLowerCase().includes(asset.toLowerCase()))
     }
 };

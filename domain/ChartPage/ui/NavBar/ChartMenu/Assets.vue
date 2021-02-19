@@ -16,7 +16,7 @@
                 <th>Asset</th>
                 <th>Exchange</th>
               </tr>
-              <tr v-for="(asset,index) in filteredData" :key="asset.id">
+              <tr v-for="(asset,index) in searchAssets" :key="asset.id">
                 <td>{{asset.asset}}</td>
                 <td>{{asset.exchange}}</td>
               </tr>
@@ -49,10 +49,19 @@
     },
     computed:{
       ...mapState('assets', ['assets']),
-      ...mapGetters('assets',['searchAssets']),
       filteredData() {
-        return this.searchAssets(this.input);
-      }
+        function unique(arr, keyProps) {
+          return Object.values(arr.reduce((uniqueMap, entry) => {
+            const key = keyProps.map(k => entry[k]).join('|');
+            if (!(key in uniqueMap)) uniqueMap[key] = entry;
+            return uniqueMap;
+          }, {}));
+        }
+        return unique(this.assets, ['asset', 'exchange'])
+      },
+      searchAssets() {
+        return this.filteredData.filter(thing => thing.asset.toLowerCase().includes(this.input.toLowerCase()))
+      },
     },
 
     props: {
