@@ -38,7 +38,14 @@ export default {
   */
   buildModules: [
     '@nuxtjs/style-resources',
+    '@nuxtjs/google-fonts',
   ],
+  googleFonts: {
+    families: {
+      Roboto: true,
+      'Montserrat': [400, 500, 600, 700],
+    },
+  },
   styleResources: {
     // your settings here
     sass: [],
