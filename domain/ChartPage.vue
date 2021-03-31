@@ -4,6 +4,7 @@
         <NavBar></NavBar>
         <div class="flex-row">
           <Sidebar @sidebarChanged="onSidebarChanged"  :selected-sidebar="selectedSidebar"></Sidebar>
+          <div>Chart</div>
         </div>
       </div>
 

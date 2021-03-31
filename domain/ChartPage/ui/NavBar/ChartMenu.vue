@@ -1,10 +1,8 @@
 <template>
   <div class="menu-items">
     <Assets @clicked="dropdownClicked" :selected-dropdown="selectedDropdown"></Assets>
-    <Timeframe @clicked="dropdownClicked" :selected-dropdown="selectedDropdown">
-    </Timeframe>
+    <Timeframe @clicked="dropdownClicked" :selected-dropdown="selectedDropdown"></Timeframe>
   </div>
-
 </template>
 
 <script>
