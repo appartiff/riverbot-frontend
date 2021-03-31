@@ -22,8 +22,6 @@ export const actions = {
 };
 export const getters = {
     getFormattedAssets: (state) => {
-
-
       return state.assets.filter(thing => thing.asset.toLowerCase().includes(asset.toLowerCase()))
     }
 };

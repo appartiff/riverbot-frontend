@@ -1,23 +1,44 @@
 <template>
-  <div class="dropdown">
-    <button @click="onClick" v-bind:class="{selected : selectedNav === 'asset'}"  class="dropbtn" id="assets-button">
-      BTCUSDT
+    <button @click="$emit('clicked')" class="dropbtn" id="assets-button">
+      {{text}}
     </button>
-  </div>
 </template>
 
 <script>
     export default {
         name: "DropdownButton",
       props: {
-        onClick: {
-          type: Function,
-          required: true
-        }
+          text:String
       }
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.dropbtn:not(.selected):hover {
+  background-color: white;
+  color: black;
+}
 
+.dropbtn {
+  background-color: #22222a;
+  color: white;
+  font-size: 0.8em;
+  border: none;
+  cursor: pointer;
+  display: block;
+  white-space: nowrap;
+  height: 5em;
+  padding: 0 1em;
+  float: left;
+}
+
+.dropdown {
+  position: relative;
+  height: 100%;
+  display: inline-block;
+}
+.dropbtn:hover {
+  background-color: #ddd;
+  color: black;
+}
 </style>

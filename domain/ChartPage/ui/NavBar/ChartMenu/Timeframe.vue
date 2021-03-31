@@ -1,24 +1,19 @@
 <template>
   <div>
-    <button @click="$emit('clicked', 'timeframe')" v-bind:class="{selected : selectedDropdown === 'timeframe'}" class="dropbtn" id="timeframe-button">
-      BTCUSDT
-    </button>
+    <DropdownButton text="5min" @clicked="$emit('clicked', 'timeframe')" v-bind:class="{selected : selectedDropdown === 'timeframe'}">
+
+    </DropdownButton>
     <transition name="fade">
-      <DropdownContainer v-show="selectedDropdown==='asset'">
+      <DropdownContainer v-show="selectedDropdown==='timeframe'">
         <DarkBox>
-          <div class="field">
-            <RoundedInput icon-right="search" placeholder="Search for Assets" v-model="input"
-                          :value="input"></RoundedInput>
-          </div>
           <div class="field">
             <table>
               <tr>
-                <th>Asset</th>
-                <th>Exchange</th>
+                <th>Timeframe</th>
+
               </tr>
-              <tr v-for="(asset,index) in searchAssets" :key="asset.id">
-                <td>{{asset.asset}}</td>
-                <td>{{asset.exchange}}</td>
+              <tr v-for="(asset,index) in timeframes" :key="asset">
+                <td>{{asset}}</td>
               </tr>
             </table>
           </div>
@@ -29,8 +24,21 @@
 </template>
 
 <script>
+import {mapState} from "vuex";
+import DropdownButton from "@/components/ui/buttons/DropdownButton";
+import DropdownContainer from "@/components/ui/Container/DropdownContainer";
+import DarkBox from "@/components/ui/box/DarkBox";
 export default {
-  name: "Timeframe"
+  name: "Timeframe",
+  components: {DropdownButton,DropdownContainer,DarkBox},
+  props: {
+    selectedDropdown: {
+      required: true,
+    }
+  },
+  computed: {
+    ...mapState('assets', ['timeframes']),
+  }
 }
 </script>
 
