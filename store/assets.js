@@ -9,13 +9,13 @@ export const mutations = {
 }
 export const actions = {
  async getAssets({commit}) {
-   let res = await this.$repositories.assets.getAssets(true);
+   let res = await this.$repositories.assets.getEnabledAssets();
    const { status, data } = res
    if (status === 200)
    {
      commit('SET_ASSETS', data);
    } else {
-
+     
    }
 
   }

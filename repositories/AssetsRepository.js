@@ -4,8 +4,8 @@ export default ($axios) => ({
     return $axios.get(`${resource}/getassets`)
   },
   getAssets: (enabled) =>$axios.get(`${resource}/getassets${enabled !== undefined ? '?enabled='+enabled :''}`),
-  getAllEnabled(){
-    return $axios.get(`${resource}/getassets?enabled=true`)
+  getEnabledAssets(){
+    return $axios.get(`${resource}/GetEnabledAssets`)
   },
   getTimeframes:()=>$axios.get(`${resource}/gettimeframes`),
   get(id) {
