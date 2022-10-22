@@ -84,9 +84,6 @@ export default {
     baseURL:"https://localhost:4000",
     proxy:false,
   },
-  proxy: {
-    '/api/': { target: 'http://localhost:8080/', pathRewrite: {'^/api/': ''}, changeOrigin: true }
-  },
   /*
   ** Build configuration
   */
