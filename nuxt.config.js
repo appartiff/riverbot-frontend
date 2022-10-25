@@ -1,7 +1,7 @@
 
 export default {
-  mode: 'spa',
   target: 'static',
+  ssr: false,
   /*
   ** Headers of the page
   */
@@ -81,7 +81,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL:"http://localhost:4000",
+    baseURL:"https://localhost:4000",
     proxy:false,
   },
   proxy: {
