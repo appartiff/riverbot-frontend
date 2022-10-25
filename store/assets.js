@@ -1,4 +1,4 @@
-import { set } from "vuex-intern";
+
 export const state = () => ({
   assets: [],
   timeframes:["5min","15min","30min","1hour","2hour","4hour","Daily"]
@@ -15,7 +15,7 @@ export const actions = {
    {
      commit('SET_ASSETS', data);
    } else {
-     
+
    }
 
   }
