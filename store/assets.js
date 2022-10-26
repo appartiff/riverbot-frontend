@@ -5,7 +5,9 @@ export const state = () => ({
 })
 
 export const mutations = {
-  SET_ASSETS: set("assets"),
+  SET_ASSETS(state, payload) {
+  state.assets = payload[0].tickers;
+},
 }
 export const actions = {
  async getAssets({commit}) {
