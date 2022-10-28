@@ -10,10 +10,9 @@
             <table>
               <tr>
                 <th>Timeframe</th>
-
               </tr>
-              <tr v-for="(asset,index) in timeframes" :key="asset">
-                <td>{{asset}}</td>
+              <tr v-for="(asset) in timeframes" :key="asset.value">
+                <td>{{asset.timeframe}}</td>
               </tr>
             </table>
           </div>
@@ -43,5 +42,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+table {
+  table-layout: auto;
+  border-collapse: collapse;
+  display: block;
+  overflow-y: scroll;
+  td:first-child,th:first-child{
+    border-right: 1px solid $line--color-dark-light;
+  }
+  td,th{
+    padding:0.25rem 1rem;
+  }
+  th {
+    @include font-description;
+  }
+  td {
+    @include font-primary;
+  }
 
+
+}
 </style>
