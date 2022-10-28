@@ -5,6 +5,10 @@ export const state = () => ({
     asset:"BTCUSDT",
     exchange:"Binance"
   },
+  selected_timeframe:{
+    timeframe:"5min",
+    value:5
+  },
   timeframes:[
     {
       timeframe:"5min",
