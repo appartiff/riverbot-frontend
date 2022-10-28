@@ -1,7 +1,36 @@
 
 export const state = () => ({
   assets: [],
-  timeframes:["5min","15min","30min","1hour","2hour","4hour","Daily"]
+
+  timeframes:[
+    {
+      timeframe:"5min",
+      value:5
+    },
+    {
+      timeframe:"15min",
+      value:15
+    },
+    {
+      timeframe:"30min",
+      value:30
+    },
+    {
+      timeframe:"1hour",
+      value:60
+    },
+    {
+      timeframe:"2hour",
+      value:120
+    },
+    {
+      timeframe:"4hour",
+      value:240
+    },
+    {
+      timeframe:"Daily",
+      value:1440
+    }]
 })
 
 export const mutations = {
