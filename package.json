@@ -27,7 +27,7 @@
   "devDependencies": {
     "@nuxtjs/google-fonts": "2.0.0",
     "@nuxtjs/style-resources": "1.2.1",
-    "@vue/test-utils": "2.2.0",
+    "@vue/test-utils": "2.2.1",
     "babel-jest": "29.2.2",
     "sass": "1.55.0",
     "sass-loader": "10.3.1",
