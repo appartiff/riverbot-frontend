@@ -1,9 +1,9 @@
 
 export const state = () => ({
-  assets: [],
+  exchange: [],
   selected_asset:{
-    asset:"BTCUSDT",
-    exchange:"Binance"
+    asset:"",
+    exchange:""
   },
   selected_timeframe:{
     timeframe:"5min",
@@ -42,8 +42,11 @@ export const state = () => ({
 
 export const mutations = {
   SET_ASSETS(state, payload) {
-  state.assets = payload[0].tickers;
-},
+  state.exchange = payload.exchange.filter((x) => x.enabled = true)
+    state.selected_asset.exchange = state.exchange[0].name
+    state.selected_asset.asset = state.exchange[0].tickers[0].asset
+
+  },
 }
 export const actions = {
  async getAssets({commit}) {
@@ -60,7 +63,25 @@ export const actions = {
 };
 export const getters = {
     getFormattedAssets: (state) => {
-      return state.assets.filter(thing => thing.asset.toLowerCase().includes(asset.toLowerCase()))
+      let assets = []
+
+      state.exchange.forEach((exchange) => {
+        exchange.tickers.forEach((ticker) => {
+          assets.push({
+            asset: ticker.asset,
+            exchange: exchange.name
+          })
+        })
+      })
+      var resArr = [];
+      assets.filter(function(item){
+        var i = resArr.findIndex(x => (x.asset == item.asset && x.exchange == item.exchange));
+        if(i <= -1){
+          resArr.push(item);
+        }
+        return null;
+      });
+      return resArr
     }
 };
 

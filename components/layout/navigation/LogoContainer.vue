@@ -1,7 +1,7 @@
 <template>
   <transition name="slide">
     <nuxt-link to="/" :class="'mobile ? logo-container-mobile : logo-container'">
-      <img src="https://d1x5w42ls10wrx.cloudfront.net/valknut-blue-website-min.png" alt="valknut">
+      <img src="/img/valknut-blue.png" alt="valknut">
       River
       <span>Bot</span>
     </nuxt-link>

@@ -16,7 +16,7 @@
                 <th>Asset</th>
                 <th>Exchange</th>
               </tr>
-              <tr v-for="(tickers,index) in assets" :key="index">
+              <tr v-for="(tickers,index) in getFormattedAssets" :key="index">
                 <td>{{tickers.asset}}</td>
                 <td>{{tickers.exchange}}</td>
               </tr>
@@ -48,7 +48,7 @@
       }
     },
     computed:{
-      ...mapState('assets', ['assets']),
+      ...mapGetters('assets', ['getFormattedAssets']),
     },
 
     props: {

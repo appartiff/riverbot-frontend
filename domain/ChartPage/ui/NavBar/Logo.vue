@@ -2,7 +2,7 @@
   <div class="nav-list-item">
     <div class="nav-brand-container">
       <router-link v-if="this.showSidebar" to="/" class="logo-container">
-        <img src="https://d1x5w42ls10wrx.cloudfront.net/valknut-blue-website-min.png" alt="logo">
+        <img src="/img/valknut-blue.png" alt="logo">
       </router-link>
       <div v-else class="hamburger" @click="toggleShow">
         <font-awesome-icon icon="bars"/>

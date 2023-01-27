@@ -22,6 +22,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
+  components: [{ path: '~/components', extensions: ['vue'], pathPrefix: false }],
   loading: { color: '#fff' },
   /*
   ** Global CSS
@@ -81,7 +82,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL:"https://localhost:4000",
+    baseURL:"https://localhost:7225",
     proxy:false,
   },
   /*
