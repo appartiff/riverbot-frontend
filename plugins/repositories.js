@@ -1,5 +1,7 @@
-import createRepository from '../repositories/Repository.'
+import createRepository from '/repositories/Repository';
 
+import Vue from 'vue'
 export default (ctx, inject) => {
-  inject('repositories', createRepository(ctx.$axios))
+
+  inject('uow', createRepository(ctx.$axios))
 }

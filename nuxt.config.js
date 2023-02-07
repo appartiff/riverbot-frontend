@@ -35,7 +35,8 @@ export default {
   */
   plugins: [
     {src:"@/plugins/plugins.js", ssr: false},
-    '~/plugins/repositories.js'
+    {src:'@/plugins/repositories.js', ssr: false},
+
   ],
   /*
   ** Nuxt.js dev-modules
@@ -90,7 +91,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL:"https://localhost:7225",
+    baseURL:"http://localhost:4000",
     proxy:false,
   },
   /*

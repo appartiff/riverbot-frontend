@@ -1,8 +1,9 @@
 const resource = '/api/assets'
 export default ($axios) => ({
   getAll() {
-    return $axios.get(`${resource}/getassets`)
+    return $axios.get(`${resource}/getallassets`)
   },
+
   getAssets: (enabled) =>$axios.get(`${resource}/getassets${enabled !== undefined ? '?enabled='+enabled :''}`),
   getEnabledAssets(){
     return $axios.get(`${resource}/GetEnabledAssets`)

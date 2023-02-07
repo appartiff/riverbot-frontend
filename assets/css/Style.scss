@@ -11,10 +11,12 @@
 @import '_bulma-vars.scss';
 
 //should be  at bottom
-@import '~bulma';
-@import '~buefy/src/scss/buefy';
+//@import '~bulma';
+//@import '~buefy/src/scss/buefy';
 
-
+.dropdown + .dropdown {
+  margin-left: 0em;
+}
 section > #Content {
   background-color: #17171d;
   padding: 2rem;
