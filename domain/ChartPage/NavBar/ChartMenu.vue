@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import Assets from './ChartMenu/Assets';
-  import Timeframe from "@/domain/ChartPage/ui/NavBar/ChartMenu/Timeframe";
+  import Assets from './ChartMenu/Assets.vue';
+  import Timeframe from "@/domain/ChartPage/NavBar/ChartMenu/Timeframe.vue";
     export default {
         name: "ChartMenu",
       components:{

@@ -6,9 +6,13 @@
   </NavList>
  <NavList>
     <nuxt-link to="/auth/register" tag="li" active-class="active">
-      <RoundedButton color="orange" size="small">
-        Register
-      </RoundedButton>
+      <b-button
+        type="is-info"
+
+        outlined
+      >
+        <strong>Register</strong>
+      </b-button>
     </nuxt-link>
     <nuxt-link to="/auth/login" tag="li" class="login-button"  active-class="active"><a>Login</a></nuxt-link>
  </NavList>

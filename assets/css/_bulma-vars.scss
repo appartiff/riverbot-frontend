@@ -1,0 +1,13 @@
+@import '_globalVars.scss';
+$is-success: $color-green;
+$primary: $color-blue;
+$link: $color-purple;
+$warning:$color-red;
+$info: $color-is-info;
+$button-text-hover-background-color: $color-dark;
+$button-text-hover-color: $color-dark;
+
+
+.is-outlined:hover  span {
+  color: $color-dark;
+}

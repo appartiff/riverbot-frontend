@@ -4,7 +4,11 @@
         <NavBar></NavBar>
         <div class="flex-row">
           <Sidebar @sidebarChanged="onSidebarChanged"  :selected-sidebar="selectedSidebar"></Sidebar>
-          <div>Chart</div>
+          <transition name="fade">
+            <div v-if="selectedSidebar ==='chart'">
+              <Chart></Chart>
+            </div>
+          </transition>
         </div>
       </div>
 
@@ -12,8 +16,8 @@
 </template>
 
 <script>
-  import Sidebar from './ChartPage/ui/Sidebar';
-  import NavBar from './ChartPage/ui/NavBar';
+  import Sidebar from './ChartPage/Sidebar.vue';
+  import NavBar from './ChartPage/NavBar.vue';
   import {mapActions, mapMutations, mapState} from "vuex";
     export default {
         name: "ChartPage",

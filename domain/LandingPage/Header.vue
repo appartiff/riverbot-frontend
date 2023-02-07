@@ -7,28 +7,29 @@
           <p class="big">Welcome To RiverBot, Your Trading Bot for Cryptocurrencies</p>
 
             <nuxt-link to="/chart" tag="div">
-                <river-button color="blue">
-                    In Development
-                </river-button>
+              <b-button
+                type="is-primary"
+                size="is-large"
+                outlined
+              >
+                 In Development
+              </b-button>
             </nuxt-link>
         </div>
       </div>
 </template>
 
 <script>
-    import RoundedButton  from "../../components/ui/buttons/RoundedButtonStyle";
   export default
   {
       components:
           {
-            'river-button':RoundedButton,
           },
 
   }
 </script>
 
 <style lang="scss" scoped>
-  @import '../../assets/css/globalVars';
 
   .Header-container
   {

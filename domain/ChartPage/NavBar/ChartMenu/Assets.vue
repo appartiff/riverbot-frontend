@@ -29,10 +29,10 @@
 </template>
 
 <script>
-  import RoundedInput from '../../../../../components/ui/input/RoundedInput';
-  import DarkBox from '../../../../../components/ui/box/DarkBox';
-  import DropdownContainer from '../../../../../components/ui/Container/DropdownContainer';
-  import Form from '../../../../../components/ui/form/Form';
+  import RoundedInput from '../../../../components/ui/input/RoundedInput.vue';
+  import DarkBox from '../../../../components/ui/box/DarkBox.vue';
+  import DropdownContainer from '../../../../components/ui/Container/DropdownContainer.vue';
+  import Form from '../../../../components/ui/form/Form.vue';
   import {mapActions, mapMutations, mapState,mapGetters} from "vuex";
   export default {
     name: "Assets",

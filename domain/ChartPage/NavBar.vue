@@ -14,9 +14,9 @@
 </template>
 
 <script>
-  import Logo  from'./NavBar/Logo'
+  import Logo  from './NavBar/Logo.vue'
  // import ChartNav from './navigation/chart/NavigationMenu'
-  import ChartMenu from './NavBar/ChartMenu';
+  import ChartMenu from './NavBar/ChartMenu.vue';
   import {mapState} from "vuex";
     export default {
         components:

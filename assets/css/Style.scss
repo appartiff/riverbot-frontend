@@ -1,8 +1,159 @@
 ﻿// Statistics.scss
 @import '_globalVars.scss';
 @import '_Mixins.scss';
-@import 'Hamburger';
+@import 'partials/_Hamburger';
 @import 'form';
+@import 'partials/Footer';
+@import 'partials/Animations';
+@import "partials/Features";
+
+@import '_globalVars.scss';
+@import '_bulma-vars.scss';
+
+//should be  at bottom
+@import '~bulma';
+@import '~buefy/src/scss/buefy';
+
+
+section > #Content {
+  background-color: #17171d;
+  padding: 2rem;
+}
+@media (max-width: 999px)
+{
+  .content-container {
+    margin: auto;
+    width: 100%;
+  }
+}
+@media(min-width: 1000px)
+{
+  .content-container {
+    margin: auto;
+    width: 72%;
+  }
+}
+
+
+h2{
+  color:#D6FFFF;
+  margin: 1.0em 0.5em;
+  margin-bottom: 0.75em;
+}
+
+#Content p
+{
+  color:silver;
+}
+
+.container
+{
+  margin-bottom:1em;
+  border-bottom: 1px solid black;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.container p {
+  text-align: center;
+  font-family: $font-sentence;
+  color: #424242;
+}
+
+#Content h3 {
+  margin-top: 5%;
+  text-align: center;
+  line-height: 1.1em;
+  color: #fff;
+}
+
+.button-container
+{
+  width: 20vw;
+  margin: auto;
+  display: flex;
+  color: #192e48;
+  align-items: flex-end;
+  margin-bottom: 1.3em;
+}
+
+
+.button-container .selected {
+  background-color: #005a9c;
+  color: white;
+}
+
+.button-container .selected:hover {
+  color: #fff;
+}
+
+//.container-features, .container-patterns
+// {
+//   margin: auto;
+//   width:100%;
+//   display: flex;
+//   flex-flow: row wrap;
+//   justify-content: center;
+//   justify-items: center;
+//
+// }
+.container-features, .container-patterns
+{
+  margin: auto;
+  width:100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(259px, 1fr));
+  grid-auto-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-content: center;
+  justify-items: center;
+
+}
+
+
+h4 {
+  color: #D6FFFF;
+}
+
+button span
+{
+  color: white;
+}
+
+/*New stuff*/
+.white-container{
+  background-color: white;
+  padding: 5em;
+}
+
+.content-button {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.25em;
+  padding: 4% 1%;
+  background-color: transparent;
+  border: 1px solid #296954;
+}
+
+.content-button:hover {
+  background-color: #005a9c;
+  color: white;
+}
+
+
+.display {
+  display: grid;
+}
+
+
+/*pricing section*/
+.pricing {
+  background-color: #fff;
+  height: 20vh;
+  width: 100%;
+}
+
 @media (min-width: 1281px)
 {
   html {

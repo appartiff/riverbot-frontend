@@ -24,9 +24,9 @@
 
 <script>
 import {mapState} from "vuex";
-import DropdownButton from "@/components/ui/buttons/DropdownButton";
-import DropdownContainer from "@/components/ui/Container/DropdownContainer";
-import DarkBox from "@/components/ui/box/DarkBox";
+import DropdownButton from "@/components/ui/buttons/DropdownButton.vue";
+import DropdownContainer from "@/components/ui/Container/DropdownContainer.vue";
+import DarkBox from "@/components/ui/box/DarkBox.vue";
 export default {
   name: "Timeframe",
   components: {DropdownButton,DropdownContainer,DarkBox},

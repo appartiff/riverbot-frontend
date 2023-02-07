@@ -29,7 +29,6 @@ export default {
   */
   css: [
     '~assets/css/Style.scss',
-    '~assets/css/index/index.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -75,7 +74,16 @@ export default {
           icons: ['fab']
         },
       ]
-    }]
+    }],
+    [
+      'nuxt-buefy',
+      {
+        css: false,
+        materialDesignIcons: false,
+        defaultIconPack: 'fas',
+        defaultIconComponent: 'font-awesome-icon',
+      },
+    ],
   ],
   /*
   ** Axios module configuration
