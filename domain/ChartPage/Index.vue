@@ -24,7 +24,7 @@
 </script>
 
 <style lang="scss">
-@import '../../assets/css/Mixins';
+
   .scanner-container > div
   {
     flex: 1;

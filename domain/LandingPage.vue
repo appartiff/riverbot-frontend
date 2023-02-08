@@ -1,6 +1,6 @@
 <template>
   <div>
-    <apexNavigation></apexNavigation>
+    <Navigation></Navigation>
     <apexHeader></apexHeader>
     <apexExchanges></apexExchanges>
     <apexContent></apexContent>
@@ -28,7 +28,6 @@
   export default {
 
     components: {
-      'apexNavigation': Navigation,
       'apexExchanges': Exchanges,
       'apexFooter': Footer,
       'apexContent': Content,

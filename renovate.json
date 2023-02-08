@@ -10,8 +10,7 @@
   "packageRules": [
     {
       "matchManagers": [
-        "npm",
-        "maven"
+        "npm"
       ],
       "updateTypes": [
         "minor",
@@ -57,27 +56,6 @@
         "https://github.com/vuejs/vue"
       ],
       "groupName": "vue monorepo",
-      "automerge": true
-    },
-    {
-      "matchSourceUrlPrefixes": [
-        "https://github.com/junit-team/junit5"
-      ],
-      "groupName": "junit5 monorepo",
-      "automerge": true
-    },
-    {
-      "matchSourceUrlPrefixes": [
-        "https://github.com/netty/netty"
-      ],
-      "groupName": "netty monorepo",
-      "automerge": true
-    },
-    {
-      "matchSourceUrlPrefixes": [
-        "https://github.com/eclipse-ee4j/jersey"
-      ],
-      "groupName": "jersey monorepo",
       "automerge": true
     }
   ],

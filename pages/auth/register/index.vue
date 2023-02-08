@@ -36,10 +36,13 @@
                 <label for="checkbox">I accept the <span>Terms of Use</span> & <span>Privacy Policy</span></label>
               </div>
               <div class="form-group center">
-                <input
-                  class="signup-button"
-                  type="submit"
-                  value="SIGN UP">
+                <RoundedButton
+                  type="is-primary"
+                  size="small"
+                  color="red"
+                >
+                  SIGN UP
+                </RoundedButton>
               </div>
             </form>
             <br>
@@ -55,7 +58,7 @@
         </div>
       </div>
     </div>
-    <apexFooter></apexFooter>
+    <Footer></Footer>
   </div>
 
 </template>

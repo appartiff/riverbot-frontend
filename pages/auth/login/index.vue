@@ -25,10 +25,13 @@
                   v-model="password">
               </div>
               <div class="form-group">
-
-                <div class="submit">
-                  <button type="submit">Log in</button>
-                </div>
+                <RoundedButton
+                  type="is-primary"
+                  size="small"
+                  color="red"
+                >
+                  Log in
+                </RoundedButton>
               </div>
               <br>
               <div class="form-group">
@@ -44,7 +47,7 @@
         </div>
       </div>
     </div>
-    <apexFooter></apexFooter>
+    <Footer></Footer>
   </div>
 
 </template>
@@ -120,31 +123,5 @@ input {
   margin-bottom: 6px;
 }
 
-.submit
-{
-  text-align: center;
-}
-.submit button {
-  border-radius: 10px;
-  padding: 0.25em 1.25em;
-  font-size: 1.618em;
-  background-color: transparent;
-  border: solid 2px #f58d6a;
-  color: white;
-}
 
-.submit button:hover,
-.submit button:active {
-  background-color: #f58d6a;
-  color: black;
-}
-
-.submit button[disabled],
-.submit button[disabled]:hover,
-.submit button[disabled]:active {
-  border: 1px solid #ccc;
-  background-color: transparent;
-  color: #ccc;
-  cursor: not-allowed;
-}
 </style>

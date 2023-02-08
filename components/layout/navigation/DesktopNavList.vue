@@ -6,20 +6,20 @@
   </NavList>
  <NavList>
     <nuxt-link to="/auth/register" tag="li" active-class="active">
-      <b-button
-        type="is-info"
-
-        outlined
+      <RoundedButton
+        type="is-primary"
+        size="small"
+        color="red"
       >
-        <strong>Register</strong>
-      </b-button>
+        Register
+      </RoundedButton>
     </nuxt-link>
     <nuxt-link to="/auth/login" tag="li" class="login-button"  active-class="active"><a>Login</a></nuxt-link>
  </NavList>
 </fragment>
 </template>
 <script>
-  import RoundedButton from '../../ui/buttons/RoundedButtonStyle';
+  import RoundedButton from '../../ui/buttons/RoundedButton.vue';
   import NavList from '../../ui/Lists/NavList';
     export default {
         name: "DesktopNavList",

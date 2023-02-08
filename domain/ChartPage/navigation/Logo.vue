@@ -2,7 +2,7 @@
   <div class="nav-list-item">
     <div class="nav-brand-container">
       <router-link v-if="this.showSidebar" to="/" class="logo-container">
-        <img src="https://d1x5w42ls10wrx.cloudfront.net/valknut-blue-website-min.png" alt="logo">
+        <img src="/img/logo.PNG" alt="logo">
       </router-link>
       <div v-else class="hamburger" @click="toggleShow">
         <font-awesome-icon icon="bars"/>
@@ -52,11 +52,17 @@
     top: 0;
     bottom: 0;
     margin: auto;
+    padding: 0.5em;
   }
+  a > img:hover
+  {
+    filter: brightness(0.5);
+  }
+
+
 
   .hamburger {
     height: 100%;
-    padding:0;
     color: white;
   }
 

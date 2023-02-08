@@ -39,13 +39,13 @@ export const actions =
     setTimeframe: ({commit, dispatch}, payload) =>
     {
       commit('setTimeframe', payload);
-      dispatch('chartCandles/loadCandles', {}, {root: true});
+      dispatch('chart-candles/loadCandles', {}, {root: true});
     },
 
     setExchange: ({commit, dispatch}, payload) =>
     {
       commit('setExchange', payload);
-      dispatch('chartCandles/loadCandles', {}, {root: true});
+      dispatch('chart-candles/loadCandles', {}, {root: true});
     },
     setDisplayedExchange: ({commit}, payload) =>
     {
@@ -93,10 +93,10 @@ export const mutations = {
     state.selectedChartType = payload;
   },
 
-
-  setExchange: (state, payload) => {
-
+  setExchange (state, payload)  {
+    console.log(payload);
     let timeframe = state.timeframes[payload.exchange];
+
     const exists = timeframe.find(person => person === state.selectedTimeframe);
     if (exists === undefined)
     {
@@ -115,10 +115,10 @@ export const mutations = {
     state.selectedAssetApi = asset.apiAsset;
     state.selectedExchange = payload.exchange;
     state.selectedAsset = asset.asset;
-    this.$router.push({name: 'scanner', params: {market:payload.market, asset: asset.asset,exchange:payload.exchange}});
+    this.$router.push({name: 'chart', params: {market:payload.market, asset: asset.asset,exchange:payload.exchange}});
   },
 
-  setTimeframe: (state, index) => {
+  setTimeframe (state, index)  {
     let timeframe = '';
     if (Number.isInteger(index))
     {
@@ -126,8 +126,9 @@ export const mutations = {
     } else {
       timeframe = state.timeframes[state.selectedExchange].find(element => element === index);
     }
+
     state.selectedTimeframe = timeframe;
-    this.$router.push({name: 'scanner', params: {timeframe:timeframe}});
+    this.$router.push({name: 'chart', params: {timeframe:timeframe}});
   },
   SET_COINS: (state, coins) =>
   {

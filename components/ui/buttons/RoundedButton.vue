@@ -2,7 +2,7 @@
     <button :class="[this.color,this.size]">
        <span>
            <slot>Button</slot>
-       </span> 
+       </span>
     </button>
 </template>
 
@@ -23,8 +23,6 @@
 </script>
 
 <style lang="scss" scoped>
-    @import '../../../assets/css/globalVars';
-    @import '../../../assets/css/_Mixins.scss';
     button
     {
         border-radius: 10px;
@@ -43,26 +41,27 @@
     }
     .blue
     {
-        border: #54DEB7 solid 2px;
+        border: $color-blue solid 2px;
         &:hover
         {
-            background-color: #54DEB7;
-            & > span
+            background-color: $color-blue;
+            & > *
             {
                 color: black!important;
             }
         }
     }
-    .orange
+    .red
     {
-        border: #cc6e33 solid 2px;
+        border: $color-red solid 2px;
         &:hover
         {
-            background: #cc6e33;
-            &> a
-            {
-                color: black !important;
-            }
+            background: $color-red;
+          & > *
+          {
+            color: black!important;
+          }
+
         }
     }
 

@@ -71,7 +71,6 @@ export const mutations = {
   addCandles:(state,payload)=>
   {
     let candles = payload;
-    console.log(candles);
     for (let i = 0; i < candles.length; i++)
     {
       let item = candles[i];

@@ -43,13 +43,13 @@ const Bitfinex = (function () {
         let  candle = data[1][0];
         let payloadCandle ={x:candle[0], y: [candle[1], candle[3], candle[4], candle[2]]};
         let payload = {exchange:exchange,'candle':payloadCandle};
-        store.commit('chartCandles/setLastCandle',payload);
+        store.commit('chart-candles/setLastCandle',payload);
       }
       if (data[1].length === 6) {
         let candle = data[1];
         let payloadCandle ={x:candle[0], y: [candle[1], candle[3], candle[4], candle[2]]};
         let payload = {exchange:exchange,'candle':payloadCandle};
-        store.commit('chartCandles/setLastCandle', payload);
+        store.commit('chart-candles/setLastCandle', payload);
       }
       //console.log(candle);
     }

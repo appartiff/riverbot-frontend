@@ -7,13 +7,13 @@
           <p class="big">Welcome To RiverBot, Your Trading Bot for Cryptocurrencies</p>
 
             <nuxt-link to="/chart" tag="div">
-              <b-button
+              <RoundedButton
                 type="is-primary"
                 size="is-large"
-                outlined
+                color="blue"
               >
                  In Development
-              </b-button>
+              </RoundedButton>
             </nuxt-link>
         </div>
       </div>

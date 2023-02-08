@@ -17,7 +17,7 @@ const Poloniex = (function () {
         ]};
 
       let payload = {exchange: 'poloniex', 'candle': payloadCandle};
-      store.commit('chartCandles/setLastCandle', payload);
+      store.commit('chart-candles/setLastCandle', payload);
 
     }
   }

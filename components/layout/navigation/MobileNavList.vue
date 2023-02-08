@@ -5,9 +5,17 @@
     </button>
     <ul class="nav-mobile-sidebar" v-if="hamburgerShow">
       <nuxt-link to="" tag="li" ><a>Home</a></nuxt-link>
-      <nuxt-link to="/auth/register" tag="li" ><a>Register</a></nuxt-link>
+      <nuxt-link to="/auth/register" tag="li" >
+        <RoundedButton
+          type="is-primary"
+          size="small"
+          color="red"
+        >
+          Register
+        </RoundedButton>
+      </nuxt-link>
       <nuxt-link to="/auth/login" tag="li" class="login-button" ><a>Login</a></nuxt-link>
-      <nuxt-link to="/scanner/crypto/okex/BTCUSDT/Daily" tag="li" ><a>Scanner</a></nuxt-link>
+      <nuxt-link to="/chart" tag="li" ><a>Scanner</a></nuxt-link>
     </ul>
   </div>
 </template>
@@ -62,7 +70,7 @@
   }
 
   .nav-mobile-sidebar a {
-    font-size: 2em;
+    font-size: 1.25em;
   }
 
   .nav-mobile-sidebar li {
