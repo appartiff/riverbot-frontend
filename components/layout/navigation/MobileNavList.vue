@@ -1,6 +1,6 @@
 <template>
   <div class="nav-mobile">
-    <button v-bind:class="hamburgerShow ? 'is-active':''" class="hamburger hamburger--collapse" @click="toggleShow">
+    <button :class="hamburgerShow ? 'is-active':''" class="hamburger hamburger--collapse" @click="toggleShow">
       <span class="hamburger-box"><span class="hamburger-inner"/></span>
     </button>
     <ul class="nav-mobile-sidebar" v-if="hamburgerShow">

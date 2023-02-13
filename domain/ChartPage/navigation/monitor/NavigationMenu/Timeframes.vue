@@ -1,20 +1,20 @@
 <template>
   <div class="dropdown timeframe-container">
-    <button @click="toggle('timeframe')" class="dropbtn" id="timeframes-button" v-bind:class="{selected : selectedNav === 'timeframe'}">
+    <button @click="toggle('timeframe')" class="dropbtn" id="timeframes-button" :class="{selected : selectedNav === 'timeframe'}">
       {{selectedTimeframe}}
     </button>
     <transition name="fade">
     <div class="dropdown-content" id="timeFrameDropDown" v-show="selectedNav==='timeframe'">
-      <div id="timeframe-poloniex"  v-bind:class="ShowExchange('poloniex')">
+      <div id="timeframe-poloniex"  :class="ShowExchange('poloniex')">
         <ul class="navigation-dropdown-list">
-          <li @click="update(i)" v-bind:class="[highlight(i)]"  v-for="(item,i) in timeframes.poloniex" :key="i">
+          <li @click="update(i)" :class="[highlight(i)]"  v-for="(item,i) in timeframes.poloniex" :key="i">
             {{item}}
           </li>
         </ul>
       </div>
-      <div id="timeframe-bitfinex" v-bind:class="ShowExchange('bitfinex')">
+      <div id="timeframe-bitfinex" :class="ShowExchange('bitfinex')">
         <ul class="navigation-dropdown-list">
-          <li @click="update(i)" v-bind:class="[highlight(i)]"   v-for="(item,i) in timeframes.bitfinex" :key="i">
+          <li @click="update(i)" :class="[highlight(i)]"   v-for="(item,i) in timeframes.bitfinex" :key="i">
             {{item}}
           </li>
         </ul>

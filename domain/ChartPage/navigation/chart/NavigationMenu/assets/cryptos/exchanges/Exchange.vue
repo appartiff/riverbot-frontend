@@ -1,6 +1,6 @@
 <template>
   <section class="marketContainer"
-           v-bind:class="ShowExchange(exchange)">
+           :class="ShowExchange(exchange)">
     <div style="height: 320px; overflow: auto;">
       <template v-if="Asset">
         <table style="width: 100%">
@@ -9,7 +9,7 @@
             <th class="header">Description</th>
           </tr>
           <tr v-for="(item,i) in Asset" @click="item.enabled ?  update(i)  : null;hideNav()"
-              v-bind:class="[item.enabled ? highlight(i):'', item.enabled === false ? 'disabled' : '']" :key="i">
+              :class="[item.enabled ? highlight(i):'', item.enabled === false ? 'disabled' : '']" :key="i">
             <template v-if="item.enabled === false">
               <th class="disabled">{{item.asset}}</th>
               <th class="disabled">Disabled</th>

@@ -123,7 +123,7 @@ export const getters = {
 
 export const actions =
   {
-    loadCandles: ({commit, state, dispatch,rootState}, payload = {}) =>
+   async loadCandles ({commit, state, dispatch,rootState}, payload = {})
     {
       if (Object.entries(payload).length === 0 && payload.constructor === Object)
       {
@@ -131,14 +131,8 @@ export const actions =
         payload.timeframe = rootState.chartNavigation.selectedTimeframe;
         payload.asset = rootState.chartNavigation.selectedAsset;
       }
-      axios
-        .get('/api/candles/getmultiplechartcandles', {
-          params: {
-            'exchange': payload.exchange,
-            'timeframe': payload.timeframe,
-            'asset': payload.asset
-          }
-        })
+      console.log(payload);
+      await this.$uow.candles.GetMultipleChartCandles( payload.exchange, payload.timeframe, payload.asset)
         .then(response => response.data).then(assets =>
       {
         dispatch('setCandles', assets);

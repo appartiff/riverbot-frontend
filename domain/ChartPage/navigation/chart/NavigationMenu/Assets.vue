@@ -1,6 +1,6 @@
 <template>
   <div class="dropdown asset-container">
-    <button @click="toggle('asset')" v-bind:class="{selected : selectedNav === 'asset'}"  class="dropbtn" id="assets-button">
+    <button @click="toggle('asset')" :class="{selected : selectedNav === 'asset'}"  class="dropbtn" id="assets-button">
       {{updateAssetBox}}
     </button>
     <transition name="fade">
@@ -9,7 +9,7 @@
         <apex-markets></apex-markets>
         <apex-cryptos></apex-cryptos>
         <div id="marketAssetsCollection">
-          <apex-exchange :exchangeProp="'okex'" :marketsProp="'crypto'"></apex-exchange>
+          <apex-exchange :exchangeProp="'binance'" :marketsProp="'crypto'"></apex-exchange>
           <apex-exchange :exchangeProp="'deribit'" :marketsProp="'crypto'"></apex-exchange>
           <apex-forex></apex-forex>
         </div>

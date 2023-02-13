@@ -1,13 +1,13 @@
 <template>
   <div class="dropdown chart-type-container">
-    <button @click="toggle('chartType')" v-bind:class="{selected : selectedNav === 'chartType'}" class="dropbtn" id="tools-button">
+    <button @click="toggle('chartType')" :class="{selected : selectedNav === 'chartType'}" class="dropbtn" id="tools-button">
     {{selectedChartType}}
     </button>
     <div id="DropDown" v-show="selectedNav==='chartType'" class="dropdown-content">
       <div>
         <ul class="navigation-dropdown-list">
-          <li  v-bind:class="[highlight('Bar')]" @click="update('Bar')">Bar</li>
-          <li  v-bind:class="[highlight('Candle')]" @click="update('Candle')">Candle</li>
+          <li  :class="[highlight('Bar')]" @click="update('Bar')">Bar</li>
+          <li  :class="[highlight('Candle')]" @click="update('Candle')">Candle</li>
 
         </ul>
       </div>

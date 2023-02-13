@@ -2,10 +2,10 @@
   <div class="Tablehead">
     <ul class="tabs1 active">
 
-      <li @click="selectExchange(okex)" v-bind:class="activeTab === okex ? 'active' : ''">
-        Okex
+      <li @click="selectExchange(binance)" :class="activeTab === okex ? 'active' : ''">
+        binance
       </li>
-      <li @click="selectExchange(deribit)" v-bind:class="activeTab === deribit ? 'active' : ''">
+      <li @click="selectExchange(deribit)" :class="activeTab === deribit ? 'active' : ''">
         Deribit
       </li>
     </ul>
@@ -19,9 +19,8 @@
       data() {
         return {
           activeTab: 'okex',
-          okex:'okex',
-          deribit:'deribit'
-
+          binance:'binance',
+          deribit:"deribit"
           //dropDown: false,
         }
       },

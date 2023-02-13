@@ -3,7 +3,7 @@
     <transition name="slide-fade">
       <div class="sidebar-left-scanner" v-if="showSidebar">
         <ul>
-          <li @click="handleSideBarClick(0)" v-bind:class="{highlight : selectedSidebarIndex === 0}">
+          <li @click="handleSideBarClick(0)" :class="{highlight : selectedSidebarIndex === 0}">
             <a>
               <font-awesome-icon icon="chart-bar"/>
               <span>Chart</span>

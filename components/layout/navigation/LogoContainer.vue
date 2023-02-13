@@ -1,7 +1,6 @@
 <template>
   <transition name="slide">
     <nuxt-link to="/" :class="'mobile ? logo-container-mobile : logo-container'">
-
       <img src="/img/logo.PNG" alt="logo" style="padding-right: 0.5em">
       River
       <span>Bot</span>

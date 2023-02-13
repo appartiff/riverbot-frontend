@@ -1,13 +1,13 @@
 <template>
   <div class="dropdown patterns-container">
-    <button @click="toggle('patterns')" v-bind:class="{selected : selectedNav === 'patterns'}" class="dropbtn"
+    <button @click="toggle('patterns')" :class="{selected : selectedNav === 'patterns'}" class="dropbtn"
             id="tools-button">
       <font-awesome-icon icon="shapes"/>
     </button>
     <div id="DropDown" v-show="selectedNav==='patterns'" class="dropdown-content">
       <div>
         <ul class="navigation-dropdown-list">
-          <li v-if="value.visible === true" @click="update(name,value.enabled)" v-bind:class="[highlight(value.enabled)]" v-for="(value, name) in patternsConfig" :key="name">
+          <li v-if="value.visible === true" @click="update(name,value.enabled)" :class="[highlight(value.enabled)]" v-for="(value, name) in patternsConfig" :key="name">
             {{name}}
           </li>
         </ul>

@@ -1,6 +1,6 @@
 <template>
   <div class="dropdown indicators-container">
-    <button @click="toggle('indicators')" v-bind:class="{selected : selectedNav === 'indicators'}"  class="dropbtn" id="indicators-button">
+    <button @click="toggle('indicators')" :class="{selected : selectedNav === 'indicators'}"  class="dropbtn" id="indicators-button">
       Indicators
 
     </button>

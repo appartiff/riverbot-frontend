@@ -13,6 +13,7 @@ export const state =
       {
         okex: ['15min', '30min', '1hour','2hour','3hour',  '4hour', '6hour', '8hour','Daily', 'Weekly','Monthly'],
         deribit: ['15min', '30min', '1hour','2hour','3hour',  '4hour', '6hour', '8hour','Daily', 'Weekly','Monthly'],
+        binance: ['15min', '30min', '1hour','2hour','3hour',  '4hour', '6hour', '8hour','Daily', 'Weekly','Monthly'],
       },
   };
 

@@ -22,7 +22,7 @@
         <td>{{item.winRate}}</td>
         <td>{{item.rR1Average}}</td>
         <td>{{item.amount}}</td>
-        <td v-bind:class="projColorCalculated(item.projectedEarnings)">{{item.projectedEarnings}}%</td>
+        <td :class="projColorCalculated(item.projectedEarnings)">{{item.projectedEarnings}}%</td>
         <td></td>
       </tr>
       </tbody>

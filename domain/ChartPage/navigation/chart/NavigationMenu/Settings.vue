@@ -1,11 +1,11 @@
 <template>
   <div class="dropdown settings-container">
-    <button @click="toggle('settings')" v-bind:class="{selected : this.selectedNav === 'settings'}" class="dropbtn">
+    <button @click="toggle('settings')" :class="{selected : this.selectedNav === 'settings'}" class="dropbtn">
       Settings
     </button>
     <div  v-show="this.selectedNav==='settings'" class="dropdown-content">
         <ul class="navigation-dropdown-list">
-          <li @click="update(river)" v-bind:class="[highlight(river)]">
+          <li @click="update(river)" :class="[highlight(river)]">
             Channel Zones
           </li>
         </ul>
