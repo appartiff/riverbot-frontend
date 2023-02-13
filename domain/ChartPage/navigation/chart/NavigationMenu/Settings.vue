@@ -1,16 +1,12 @@
 <template>
-  <div class="dropdown settings-container">
-    <button @click="toggle('settings')" :class="{selected : this.selectedNav === 'settings'}" class="dropbtn">
-      Settings
-    </button>
-    <div  v-show="this.selectedNav==='settings'" class="dropdown-content">
-        <ul class="navigation-dropdown-list">
-          <li @click="update(river)" :class="[highlight(river)]">
-            Channel Zones
-          </li>
-        </ul>
-    </div>
-  </div>
+  <dropdown name="Settings">
+    <ul class="navigation-dropdown-list">
+      <li @click="update(river)" :class="[highlight(river)]">
+        Channel Zones
+      </li>
+    </ul>
+  </dropdown>
+
 </template>
 
 <script>
@@ -45,8 +41,5 @@
 </script>
 
 <style scoped>
-  .settings-container
-  {
-    border-left: 1px solid #66fcf1;
-  }
+
 </style>

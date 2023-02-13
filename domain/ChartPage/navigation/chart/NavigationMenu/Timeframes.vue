@@ -1,10 +1,6 @@
 <template>
-  <div class="dropdown timeframe-container">
-    <button @click="toggle('timeframe')" class="dropbtn" id="timeframes-button" :class="{selected : selectedNav === 'timeframe'}">
-      {{selectedTimeframe}}
-    </button>
-    <transition name="fade">
-    <div class="dropdown-content" id="timeFrameDropDown" v-show="selectedNav==='timeframe'">
+  <dropdown :name="selectedTimeframe">
+
       <div id="timeframe-bitfinex" :class="ShowExchange('binance')">
         <ul class="navigation-dropdown-list">
           <li @click="update(i)" :class="[highlight(i)]"   v-for="(item,i) in timeframes.binance" :key="i">
@@ -19,9 +15,8 @@
           </li>
         </ul>
       </div>
-    </div>
-    </transition>
-  </div>
+
+  </dropdown>
 </template>
 
 <script>
@@ -71,18 +66,7 @@
 </script>
 
 <style>
-  #timeFrameDropDown
-  {
-    z-index: 2;
-  }
-  .timeframe-container
-  {
-    border-left: 1px solid #66fcf1;
-    border-right: 1px solid #66fcf1;
-  }
-  #timeframes-button {
-    min-width: 5em;
-  }
+
   .timeframe-container span {
     display: inline-block;
     vertical-align: middle;

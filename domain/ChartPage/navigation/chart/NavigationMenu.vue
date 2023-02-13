@@ -4,8 +4,8 @@
       <apexAssets></apexAssets>
       <apexTime></apexTime>
       <apexChartType></apexChartType>
+<apexIndicators></apexIndicators>
       <apexSettings></apexSettings>
-      <Test></Test>
     </div>
 <!--    <ul v-if="mobile === false" class="nav-horizontal">-->
 <!--      <router-link :to="{name: 'register'}" tag="li" class="signup-button" active-class="active"><a>Register</a></router-link>-->

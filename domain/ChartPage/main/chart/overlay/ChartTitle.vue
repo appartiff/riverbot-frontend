@@ -53,14 +53,14 @@
   {
     position: absolute;
     margin-top: 0.4em;
-    margin-left:1em;
+    margin-left:0.4em;
     z-index: 1;
   }
   .overlay > p
   {
     margin-top: 0;
     margin-bottom: 0.4em;
-    font-size: 1.25em;
+    font-size: 1em;
     color:white;
     display:table;
   }

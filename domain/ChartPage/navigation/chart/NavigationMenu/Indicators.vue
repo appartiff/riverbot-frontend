@@ -1,20 +1,16 @@
 <template>
-  <div class="dropdown indicators-container">
-    <button @click="toggle('indicators')" :class="{selected : selectedNav === 'indicators'}"  class="dropbtn" id="indicators-button">
-      Indicators
+  <dropdown name="Indicators">
 
-    </button>
-    <div id="timeFrameDropDown" v-show="selectedNav==='indicators'" class="dropdown-content">
-      <div id="timeframe"  v-show="selectedNav==='indicators'">
         <ul class="timeframes-list">
           <li>RSI</li>
           <li>AC</li>
           <li>AO</li>
           <li>MA</li>
         </ul>
-      </div>
-    </div>
-  </div>
+
+
+  </dropdown>
+
 </template>
 
 <script>
@@ -36,9 +32,6 @@
 </script>
 
 <style scoped>
-  .indicators-container {
-    border-left: 1px solid #66fcf1;
 
-  }
 
 </style>

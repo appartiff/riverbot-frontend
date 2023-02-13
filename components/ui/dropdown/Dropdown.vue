@@ -41,6 +41,7 @@ export default {
 
 .dropdown-content a {
   color: white;
+  z-index: 2;
   padding: 0.3em 1em;
   text-decoration: none;
   display: block;

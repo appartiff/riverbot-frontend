@@ -1,18 +1,14 @@
 <template>
-  <div class="dropdown chart-type-container">
-    <button @click="toggle('chartType')" :class="{selected : selectedNav === 'chartType'}" class="dropbtn" id="tools-button">
-    {{selectedChartType}}
-    </button>
-    <div id="DropDown" v-show="selectedNav==='chartType'" class="dropdown-content">
-      <div>
-        <ul class="navigation-dropdown-list">
-          <li  :class="[highlight('Bar')]" @click="update('Bar')">Bar</li>
-          <li  :class="[highlight('Candle')]" @click="update('Candle')">Candle</li>
+  <dropdown :name="selectedChartType">
+    <ul class="navigation-dropdown-list">
+      <ul class="navigation-dropdown-list">
+        <li  :class="[highlight('Bar')]" @click="update('Bar')">Bar</li>
+        <li  :class="[highlight('Candle')]" @click="update('Candle')">Candle</li>
 
-        </ul>
-      </div>
-    </div>
-  </div>
+      </ul>
+    </ul>
+  </dropdown>
+
 </template>
 
 <script>
