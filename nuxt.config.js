@@ -22,7 +22,8 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  components: [{ path: '~/components', extensions: ['vue'], pathPrefix: false }],
+  components: [{ path: '~/components', extensions: ['vue'], pathPrefix: false },
+    { path: '~/domain', extensions: ['vue'], pathPrefix: false }],
   loading: { color: '#fff' },
   /*
   ** Global CSS

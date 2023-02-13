@@ -17,9 +17,8 @@
 
 <script>
   import Sidebar from './ChartPage/Sidebar.vue';
-  import NavBar from './ChartPage/NavBar.vue';
+
   import {mapActions, mapMutations, mapState} from "vuex";
-  import Chart from './ChartPage/Chart.vue';
     export default {
         name: "ChartPage",
       data() {
@@ -35,9 +34,7 @@
 
       },
       components:{
-        Chart,
           Sidebar,
-        NavBar
       },
       created() {
         this.$store.dispatch('assets/getAssets');

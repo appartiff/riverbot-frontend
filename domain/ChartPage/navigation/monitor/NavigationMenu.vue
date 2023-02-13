@@ -8,20 +8,14 @@
 
 <script>
     import Time from './NavigationMenu/Timeframes'
-    import Assets from './NavigationMenu/Assets'
-    import Indicators from './NavigationMenu/Indicators';
-    import Patterns from './NavigationMenu/patterns';
+
     import Harmonics from './NavigationMenu/Harmonics';
-    import ChartType from './NavigationMenu/ChartType';
+   ;
 
     export default {
         components:
             {
             'apexTime': Time,
-            'apexAssets': Assets,
-                'apexChartType':ChartType,
-            'apexIndicators': Indicators,
-            'apexPatterns': Patterns,
             'apexHarmonics': Harmonics,}
     }
 </script>
