@@ -28,7 +28,7 @@
     "vuex-intern": "0.1.0"
   },
   "devDependencies": {
-    "@nuxtjs/google-fonts": "2.0.0",
+    "@nuxtjs/google-fonts": "3.2.0",
     "@nuxtjs/style-resources": "1.2.1",
     "babel-jest": "29.4.3",
     "sass": "1.58.3",
